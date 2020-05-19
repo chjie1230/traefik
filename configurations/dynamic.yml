@@ -1,0 +1,22 @@
+# http routing section
+http:
+  routers:
+    # Define a connection between requests and services
+    to-baidu:
+      rule: "Host(`master.chjie.xyz`)"
+      # If the rule matches, forward to the whoami service (declared below)
+      service: baidu
+
+
+  middlewares:
+    conversation:
+      replacePathRegex:
+        regex: v1
+        replacement: v1.1
+
+  services:
+    # Define how to reach an existing service on our infrastructure
+    baidu:
+      loadBalancer:
+        servers:
+          - url: http://10.12.163.13:88

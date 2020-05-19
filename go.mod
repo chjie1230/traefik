@@ -50,6 +50,7 @@ require (
 	github.com/huandu/xstrings v1.2.0 // indirect
 	github.com/influxdata/influxdb1-client v0.0.0-20190809212627-fc22c7df067e
 	github.com/instana/go-sensor v1.5.1
+	github.com/jteeuwen/go-bindata v3.0.8-0.20180305030458-6025e8de665b+incompatible // indirect
 	github.com/libkermit/compose v0.0.0-20171122111507-c04e39c026ad
 	github.com/libkermit/docker v0.0.0-20171122101128-e6674d32b807
 	github.com/libkermit/docker-check v0.0.0-20171122104347-1113af38e591
@@ -85,6 +86,7 @@ require (
 	github.com/vulcand/predicate v1.1.0
 	go.elastic.co/apm v1.7.0
 	go.elastic.co/apm/module/apmot v1.7.0
+	go.uber.org/zap v1.10.0
 	golang.org/x/net v0.0.0-20200301022130-244492dfa37a
 	golang.org/x/time v0.0.0-20191024005414-555d28b269f0
 	google.golang.org/grpc v1.27.1

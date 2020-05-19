@@ -3,7 +3,6 @@ package tcp
 import (
 	"bytes"
 	"fmt"
-	"io"
 	"net"
 	"testing"
 	"time"
@@ -74,8 +73,10 @@ func TestCloseWrite(t *testing.T) {
 
 	var buf []byte
 	buffer := bytes.NewBuffer(buf)
-	n, err := io.Copy(buffer, conn)
+	n, err := buffer.ReadFrom(conn)
 	require.NoError(t, err)
+	//n, err := io.Copy(buffer, conn)
+	//require.NoError(t, err)
 	require.Equal(t, int64(4), n)
 	require.Equal(t, "PONG", buffer.String())
 }
